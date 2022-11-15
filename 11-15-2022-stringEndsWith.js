@@ -1,9 +1,12 @@
+// Given Problem from CodeWars:
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
 // Examples:
 
 // solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
+
+
 
 //PREP Method
 
@@ -26,19 +29,20 @@
 // 4.) Compare the newly modified str and ending, if they match, return true, if not, return false.
 
 function solution(str, ending){
-    // Count the number of chars in str, and number of chars in ending
-    let strLength = str.length
-    let endingLength = ending.length
+    // // Count the number of chars in str, and number of chars in ending
+    // let strLength = str.length
+    // let endingLength = ending.length
 
-    let differenceOfChars = strLength - endingLength // Find difference of number
+    // let differenceOfChars = strLength - endingLength // Find difference of number
 
-    let compareStr = str.slice(differenceOfChars)// Subract that number of chars off of str and store the newly modified str
+    // let compareStr = str.slice(differenceOfChars)// Subract that number of chars off of str and store the newly modified str
 
-    //Compare the newly modified str and ending, if they match, return true, if not, return false.
-    if (compareStr == ending){
-      return true
-    } else {
-      return false
-    }
+    // //Compare the newly modified str and ending, if they match, return true, if not, return false.
+    // if (compareStr == ending){
+    //   return true
+    // } else {
+    //   return false
+    // }
   
+    return str.endsWith(ending)
   }
