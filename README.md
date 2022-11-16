@@ -1,5 +1,5 @@
-# allCodeWars7thKyuChallenges
-All code challenges from codewars.com that are of the 7th kyu difficulty level.
+# All CodeWars 7th Kyu Challenges
+All of my attempts at the code challenges from codewars.com that are of the 7th kyu difficulty level.
 
 
 
