@@ -22,13 +22,19 @@
 
 
 
+// My Solution
+// function getCount(str) {
+//     let val = 0
+//     for (let x = 0; x < str.length; x++){
+//         if ( str[x] == "a" || str[x] == "e" || str[x] == "i" || str[x] == "o" || str[x] == "u"){
+//             val++
+//         }
+//     }
+//     return val
+//   }
 
-function getCount(str) {
-    let val = 0
-    for (let x = 0; x < str.length; x++){
-        if ( str[x] == "a" || str[x] == "e" || str[x] == "i" || str[x] == "o" || str[x] == "u"){
-            val++
-        }
-    }
-    return val
+// Codewars Solution
+  function getCount(str) {
+    return (str.match(/[aeiou]/ig)||[]).length;
   }
+  //this solution uses the ".match" method.  It retrieves the result of matching a string against a regular expression 
