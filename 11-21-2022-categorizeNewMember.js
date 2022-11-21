@@ -39,14 +39,26 @@
 // -------------------------------------------------------------------- //
 // --------------------------------SOLUTION---------------------------- //
 
-function openOrSenior(data){
-    playerArray =[]
-    data.forEach(element => {
-        if (element[0] >= 55 && element[1] > 7) {
-            playerArray.push("Senior")
-        } else {
-            playerArray.push("Open")
-        }
-    });
-    return playerArray
+// function openOrSenior(data){
+//     playerArray =[]
+//     data.forEach(element => {
+//         if (element[0] >= 55 && element[1] > 7) {
+//             playerArray.push("Senior")
+//         } else {
+//             playerArray.push("Open")
+//         }
+//     });
+//     return playerArray
+//   }
+
+  function openOrSenior(data){
+    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
   }
+
+//optimized code used the map method.  
+
+//  It creates a new array (something we need to return)
+//  with the results of calling a provided function on every element in the calling array. (in our case, a t/f test,)
+//  This function also used a ternary operator, 
+//    condition ? doThisIfTrue : doThisIfFalse
+//    >54 && >7 ? console.log('senior') : console.log('open')
