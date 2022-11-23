@@ -38,3 +38,21 @@
 // -------------------------------------------------------------------- //
 // --------------------------------SOLUTION---------------------------- //
 
+
+function DNAStrand(dna){
+    let arr = dna.split("")
+    let returnArr = []
+    for ( i = 0 ; i<arr.length; i++) {
+        if (arr[i] == "A"){
+            returnArr.push("T")
+        } else if (arr[i] == "T"){
+            returnArr.push("A")
+        } else if (arr[i] == "C"){
+            returnArr.push("G")
+        } else if (arr[i] == "G"){
+            returnArr.push("C")
+        } 
+    }
+    console.log(returnArr)
+    return returnArr.join("").toString()
+}
