@@ -30,11 +30,15 @@
 // --------------------------------SOLUTION---------------------------- //
 
 function squareDigits(num) {
-    let splitNum = num.split("")
+    let numToString = num.toString()
+    let splitNum = numToString.split("")
+    let arrOfSquares = []
     splitNum.forEach(ele => {
-        let numHolder = ele * ele
-        let finalResult = numHolder.join("")
+        let numHolder = (ele * ele)
+        arrOfSquares.push(numHolder)
     });
-    
+    console.log(arrOfSquares)
+    let finalResult = arrOfSquares.join('')
+    finalResult = parseInt(finalResult)
+    console.log(finalResult)}
     return finalResult
-}
