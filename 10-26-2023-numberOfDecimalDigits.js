@@ -19,8 +19,8 @@
 //  67  =>  2
 
 // P - Psuedocode
-// 1.) Use a spread operator to convert the int to a new array.
-// 2.) use array.length to determine number of digitis.  This only works because the interger is not negative.
+// 1.) Use a spread operator to convert the int to a new array.  NOPE WRONG
+// 2.) use n.toString() then .split("") then length to determine number of digitis.  This only works because the interger is not negative.
 // 3.) return the array.length
 // 4.) 
 
@@ -28,6 +28,5 @@
 // --------------------------------SOLUTION---------------------------- //
 
 function digits(n) {
-    let newArr = [...n]
-    return newArr.length
+    return (n.toString().split("").length())
 }
