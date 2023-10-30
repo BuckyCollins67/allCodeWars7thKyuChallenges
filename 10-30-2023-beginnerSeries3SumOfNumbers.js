@@ -41,29 +41,27 @@
 // --------------------------------SOLUTION---------------------------- //
 
 function getSum(a, b){
+    //set blank array
+    let arr = []
+
     // case for if both numbers are equal
     if (a == b) {
         console.log(`CASE 0: Both numbers were the same.`)
         return a;
-   } else if (a < b){  //case for if the first number is less than the second number
-    for (let i = a; i <= b; i++){
-        let arr = []
+   } else if (a <= b){  //case for if the first number is less than the second number
+    for (let i = a; i <= b; i +=1){
         arr.push(i)
-        let total = a;
-        total += 1;
-        console.log(`CASE 1: We were given ${a} and ${b}.  The total sum is ${total} The array looks like this ${arr}`)
-        return total
+        // console.log(`CASE 1: We were given ${a} and ${b}.  The array looks like this ${arr}`)
+        //this gives us an array of the numbers and every number inbetween in order and sets it as "arr"
     }
  } else {
-        for (let i = b; i <= a; i++){  //case for if second number is less than first number
-            let arr = []
+        for (let i = b; i <= a; i +=1){  //case for if second number is less than first number
             arr.push(i)
-            let total = b;
-            total += 1;
-            console.log(`CASE 2: We were given ${b} and ${a}.  The total sum is ${total} The array looks like this ${arr}`)
-            return total
+            // console.log(`CASE 2: We were given ${b} and ${a}. The array looks like this ${arr}`)  
+        //this gives us an array of the numbers and every number inbetween in order and sets it as "arr"
         }
 
     }
-    
+    console.log(`the final array looks like this ${arr}`)
+    return (arr.reduce((a,b) => a + b, 0))  //this adds up every item in the array.
 }
