@@ -33,7 +33,7 @@
 
 function findNextSquare(sq){
     let root = (Math.sqrt(sq))  //Calculate the square root of the given int.  
-    if (root = Math.floor(root)){  //Test to see if it's a 'perfect' number.  Math.floor will be used.
+    if (root == Math.floor(root)){  //Test to see if it's a 'perfect' number.  Math.floor will be used.
         return ((root + 1)**2 )  //If it is a 'perfect' number, we'll add one and return the square of that number
     } else {
         return (-1) //if not, we'll return -1
